@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
 
+		<link rel="stylesheet" href="css/custom.css">
+
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
 
@@ -21,12 +23,38 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>A simple slide</section>
+
+				<section>
+					<section>A slide with a subslide</section>
+					<section>hello you</section>
+				</section>
+
+				<section>
+					Take some Java sample
+					<pre><code data-sample='code/java/HelloWorld.java'></code></pre>
+				</section>
+
+				<section>
+					And a few JS too
+					<pre><code data-sample='code/js/HelloWorld.js'></code></pre>
+				</section>
+
+
+				<section>
+					You won't mind a config file
+					<pre><code data-sample='code/yaml/application.yml'></code></pre>
+				</section>
+	
+				<section>
+					<section>slide with shell subslide</section>
+					<section><web-term path=""/></section>
+				</section>
 			</div>
 		</div>
 
@@ -41,7 +69,9 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/sampler.js' },
+					{ src: "js/demoit.js", async: true }
 				]
 			});
 		</script>
